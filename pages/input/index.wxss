@@ -1,0 +1,17 @@
+.rong-bars{
+  width: 80%;
+  margin: 60% auto 0;
+}
+.rong-input{
+  width: 100%;
+  padding: 10rpx 0;
+}
+
+.rong-picker {
+  margin-bottom: 1rem;
+}
+
+.rong-button-login{
+  width: 100%;
+  margin-top: 100rpx;
+}

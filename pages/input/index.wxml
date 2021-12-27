@@ -1,0 +1,20 @@
+<view class="rong-container">
+  <view class="rong-bars">
+    <!-- appkey 选择 -->
+    <picker bindchange="appkeyChange" class="rong-picker" range="{{appkeys}}">
+      <view class="picker">Appkey: {{appkeys[appkeyIndex]}}</view>
+    </picker>
+    <!-- 角色选择 -->
+    <picker bindchange="roleChange" class="rong-picker" range-key="name" value="{{ roleIndex }}" range="{{roles}}">
+      <view class="picker">角色: {{roles[roleIndex].name}}</view>
+    </picker>
+    <!-- 用户 唯一 token -->
+    <input type="text" class="rong-input rong-input-uid" placeholder-class="rong-placeholder" placeholder="输入用户 token" bindinput="onInput" value="{{ joinRoomInfo.token }}" data-type="token" />
+    <!-- 用户 ID -->
+    <input type="text" class="rong-input rong-input-uid" placeholder-class="rong-placeholder" placeholder="输入用户 ID 例：MfgILRowx" bindinput="onInput" value="{{ joinRoomInfo.userId }}" data-type="userId" />
+    <!-- 创建或加入房间号 -->
+    <input type="text" class="rong-input rong-input-uid" placeholder-class="rong-placeholder" maxlength="6" placeholder="输入房间号 例：987654" bindinput="onInput" value="{{ joinRoomInfo.hubId }}" data-type="hubId" />
+    <!-- 跳转加入房间 -->
+    <button class="rong-button rong-button-login" bindtap="joinRoom">加入房间</button>
+  </view>
+</view>
